@@ -1,8 +1,9 @@
 # ORS4SysInfo
 
 
-
-<!-- ![ORS4SysInfo - Portada](https://github.com/n0rs4rt/ORS4SysInfo/blob/685b5af870dea869c6e13e22faa48e24b87dd8f7/assets/portada.png) -->
+<p align="center">
+  <img src="https://github.com/n0rs4rt/ORS4SysInfo/blob/685b5af870dea869c6e13e22faa48e24b87dd8f7/assets/portada.png" alt="ORS4SysInfo - Portada" width="900">
+</p>
 
 ORS4SysInfo es una herramienta desarrollada en Python para el inventario técnico de equipos Windows.
 Permite escanear un computador, recopilar información interna del sistema, registrar los datos en una base de datos local, generar reportes técnicos en PDF y enviar dichos reportes por email.
@@ -85,11 +86,10 @@ ORS4SysInfo recopila información técnica interna del equipo, entre ellas:
 
 ## Interfaz principal
 
-<!-- TODO: Colocar aquí una captura general de la interfaz principal -->
+<p align="center">
+  <img src="https://github.com/n0rs4rt/ORS4SysInfo/blob/0f2914af37a645b8e53d6ef9c16d741b024a2b83/assets/sin_registros.png" alt="ORS4SysInfo - Portada" width="900">
+</p>
 
-<!-- Ejemplo: -->
-
-<!-- ![Interfaz principal](docs/images/interfaz-principal.png) -->
 
 La interfaz permite visualizar los equipos registrados, buscar registros, consultar detalles técnicos del equipo seleccionado y acceder a las opciones de reportes, email, notas y copias de seguridad.
 
