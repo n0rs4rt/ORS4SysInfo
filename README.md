@@ -168,11 +168,26 @@ Los reportes están pensados para documentación técnica, soporte, auditorías 
 
 ---
 
-## Envío de reportes por email
+## Configuración SMTP para envío de email
+
+Para utilizar la función de envío de reportes por email es necesario configurar previamente una cuenta SMTP.
+
+Por seguridad, ORS4SysInfo solo permite configuraciones SMTP con conexión segura, como SSL o TLS. No se recomienda ni se permite el uso de configuraciones sin cifrado para el envío de correos.
+
+En servicios como Gmail, Outlook, Microsoft 365 u otros proveedores similares, puede ser necesario generar una contraseña de aplicación para poder utilizar SMTP. Esto depende de las políticas de seguridad del proveedor, especialmente cuando la cuenta tiene autenticación en dos pasos o restricciones para aplicaciones externas.
 
 <p align="center">
-  <img src="https://github.com/n0rs4rt/ORS4SysInfo/blob/2178553bbefae780e9c795cb87e6a55fed19c652/assets/email.png" alt="ORS4SysInfo - Portada" width="500">
+  <img src="https://github.com/n0rs4rt/ORS4SysInfo/blob/4d685456bf87b5e22a9e5234741c7e092ed3a56c/assets/config_email.png" alt="ORS4SysInfo - Portada" width="400">
 </p>
+
+En servidores de correo propios o corporativos, este requisito casi siempre no es necesario sin embargo puede variar según la configuración del servidor SMTP.
+
+Las credenciales SMTP se guardan localmente en el equipo y son cifradas por la propia aplicación. La contraseña no se almacena en texto plano. ORS4SysInfo cifra y descifra la información únicamente cuando es necesario para realizar el envío del reporte.
+
+La aplicación no envía, almacena ni comparte estas credenciales en servicios externos.
+
+---
+## Envío de reportes por email
 
 La aplicación permite generar un reporte PDF y enviarlo por email directamente desde la interfaz (Para enviarlo a mas de un destinatario sera necesario separar los email por , o ; ).
 
@@ -185,6 +200,11 @@ La ventana de envío permite indicar:
 * Archivo PDF adjunto.
 
 El reporte se genera automáticamente y se adjunta al mensaje (Si se realiza click sobre el reporte es posible visualizarlo antes de enviarlo).
+
+<p align="center">
+  <img src="https://github.com/n0rs4rt/ORS4SysInfo/blob/2178553bbefae780e9c795cb87e6a55fed19c652/assets/email.png" alt="ORS4SysInfo - Portada" width="400">
+</p>
+
 
 ---
 
@@ -317,32 +337,6 @@ El proyecto ha sido probado en equipos con Windows 8, Windows 10 y Windows 11, a
 
 ---
 
-## Imágenes del proyecto
-
-<!-- TODO: Colocar aquí una galería de capturas del programa -->
-
-<!-- Captura 1: Portada o pantalla inicial -->
-
-<!-- ![Pantalla inicial](docs/images/pantalla-inicial.png) -->
-
-<!-- Captura 2: Interfaz principal con equipo seleccionado -->
-
-<!-- ![Equipo seleccionado](docs/images/equipo-seleccionado.png) -->
-
-<!-- Captura 3: Ventana de envío por email -->
-
-<!-- ![Enviar reporte por email](docs/images/enviar-email.png) -->
-
-<!-- Captura 4: Ventana Acerca de -->
-
-<!-- ![Acerca de](docs/images/acerca-de.png) -->
-
-<!-- Captura 5: Reporte PDF generado -->
-
-<!-- ![Reporte PDF](docs/images/reporte-pdf.png) -->
-
----
-
 ## Seguridad y privacidad
 
 ORS4SysInfo está diseñado para recopilar información técnica útil para inventario y soporte.
@@ -355,6 +349,10 @@ Se recomienda utilizar la herramienta únicamente en entornos propios, corporati
 ---
 
 ## Licencia
+
+<p align="center">
+  <img src="https://github.com/n0rs4rt/ORS4SysInfo/blob/93516f6acc63ff0c263cfdba7bca4c3d704eb853/assets/acerca_de.png" alt="ORS4SysInfo - Portada" width="300">
+</p>
 
 Este proyecto está licenciado bajo MIT License.
 
