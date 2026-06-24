@@ -99,6 +99,10 @@ La interfaz permite visualizar los equipos registrados, buscar registros, consul
 
 Cada equipo escaneado queda registrado automáticamente en la base de datos local.
 
+<p align="center">
+  <img src="https://github.com/n0rs4rt/ORS4SysInfo/blob/a6c7ca63266bfc5860cf17cc6a64892e01e704e1/assets/detalles.png" alt="ORS4SysInfo - Portada" width="500">
+</p>
+
 ---
 
 ## Búsqueda y gestión de equipos
