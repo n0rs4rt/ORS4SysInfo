@@ -42,6 +42,10 @@ Si encuentras algún fallo o tienes una sugerencia, puedes reportarlo a través 
 
 ORS4SysInfo recopila información técnica interna del equipo, entre ellas:
 
+<p align="center">
+  <img src="https://github.com/n0rs4rt/ORS4SysInfo/blob/eecd09e696c9b9522e285d334b35d6891b3de19c/assets/escaneo.png" alt="ORS4SysInfo - Portada" width="900">
+</p>
+
 * Nombre del equipo.
 * Modelo del computador.
 * Sistema operativo.
@@ -153,8 +157,7 @@ Si un equipo ya registrado se vuelve a escanear, la información técnica se act
 ## Reportes PDF
 
 <p align="center">
-  <img src="https://github.com/n0rs4rt/ORS4SysInfo/blob/150bf98082e3227b428039016ca1fc6096187a08/assets/PDF.png
-" alt="ORS4SysInfo - Portada" width="900">
+  <img src="https://github.com/n0rs4rt/ORS4SysInfo/blob/2178553bbefae780e9c795cb87e6a55fed19c652/assets/PDF.png" alt="ORS4SysInfo - Portada" width="900">
 </p>
 
 ORS4SysInfo permite generar un reporte técnico en PDF para cada equipo registrado.
@@ -167,13 +170,11 @@ Los reportes están pensados para documentación técnica, soporte, auditorías 
 
 ## Envío de reportes por email
 
-<!-- TODO: Colocar aquí una captura de la ventana de envío por email -->
+<p align="center">
+  <img src="https://github.com/n0rs4rt/ORS4SysInfo/blob/2178553bbefae780e9c795cb87e6a55fed19c652/assets/email.png" alt="ORS4SysInfo - Portada" width="900">
+</p>
 
-<!-- Ejemplo: -->
-
-<!-- ![Enviar reporte por email](docs/images/enviar-email.png) -->
-
-La aplicación permite generar un reporte PDF y enviarlo por email directamente desde la interfaz.
+La aplicación permite generar un reporte PDF y enviarlo por email directamente desde la interfaz (Para enviarlo a mas de un destinatario sera necesario separar los email por , o ; ).
 
 La ventana de envío permite indicar:
 
@@ -183,17 +184,11 @@ La ventana de envío permite indicar:
 * Mensaje.
 * Archivo PDF adjunto.
 
-El reporte se genera automáticamente y se adjunta al mensaje.
+El reporte se genera automáticamente y se adjunta al mensaje (Si se realiza click sobre el reporte es posible visualizarlo antes de enviarlo).
 
 ---
 
 ## Copias de seguridad
-
-<!-- TODO: Colocar aquí una captura de exportación/importación de base de datos -->
-
-<!-- Ejemplo: -->
-
-<!-- ![Copias de seguridad](docs/images/copias-seguridad.png) -->
 
 ORS4SysInfo permite exportar e importar la base de datos local.
 
@@ -206,6 +201,7 @@ Esto permite:
 * Recuperar datos en caso de pérdida o reinstalación.
 
 Antes de importar una base de datos, se recomienda realizar una copia de seguridad de la base actual.
+Despues de importar una base de datos es necesario reiniciar la aplicacion para que dichos datos carguen
 
 ---
 
@@ -220,6 +216,10 @@ Esto puede ocurrir porque la información se obtiene mediante WMI y depende de c
 En discos HDD o SSD SATA internos, normalmente el serial suele obtenerse de forma más directa, confiable y consistente.
 
 En discos externos, algunos adaptadores pueden interferir y mostrar datos del puente USB o del controlador en lugar del serial real del disco.
+
+<p align="center">
+  <img src="https://github.com/n0rs4rt/ORS4SysInfo/blob/1183e20a735c275641d389205a5254377dd9a3b0/assets/serial%20discos.png" alt="ORS4SysInfo - Portada" width="900">
+</p>
 
 ---
 
@@ -264,6 +264,10 @@ En algunos casos, una GPU integrada puede aparecer con una capacidad de 128 MB.
 Esto suele representar una reserva mínima de memoria compartida con el sistema y no necesariamente la memoria total disponible dinámicamente.
 
 Para la detección es necesario tener instalados los drivers gráficos correctos.
+
+<p align="center">
+  <img src="https://github.com/n0rs4rt/ORS4SysInfo/blob/eecd09e696c9b9522e285d334b35d6891b3de19c/assets/graficas.png" alt="ORS4SysInfo - Portada" width="900">
+</p>
 
 ---
 
