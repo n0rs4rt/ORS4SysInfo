@@ -171,7 +171,7 @@ Los reportes están pensados para documentación técnica, soporte, auditorías 
 ## Envío de reportes por email
 
 <p align="center">
-  <img src="https://github.com/n0rs4rt/ORS4SysInfo/blob/2178553bbefae780e9c795cb87e6a55fed19c652/assets/email.png" alt="ORS4SysInfo - Portada" width="900">
+  <img src="https://github.com/n0rs4rt/ORS4SysInfo/blob/2178553bbefae780e9c795cb87e6a55fed19c652/assets/email.png" alt="ORS4SysInfo - Portada" width="500">
 </p>
 
 La aplicación permite generar un reporte PDF y enviarlo por email directamente desde la interfaz (Para enviarlo a mas de un destinatario sera necesario separar los email por , o ; ).
@@ -256,6 +256,11 @@ Si el adaptador está desconectado, deshabilitado o sin enlace, la velocidad no 
 
 ---
 
+<p align="center">
+  <img src="https://github.com/n0rs4rt/ORS4SysInfo/blob/eecd09e696c9b9522e285d334b35d6891b3de19c/assets/graficas.png" alt="ORS4SysInfo - Portada" width="900">
+</p>
+
+
 ### Tarjetas gráficas
 
 La aplicación puede detectar tanto tarjetas gráficas dedicadas como integradas, siempre que Windows y los drivers correspondientes expongan correctamente la información.
@@ -264,10 +269,6 @@ En algunos casos, una GPU integrada puede aparecer con una capacidad de 128 MB.
 Esto suele representar una reserva mínima de memoria compartida con el sistema y no necesariamente la memoria total disponible dinámicamente.
 
 Para la detección es necesario tener instalados los drivers gráficos correctos.
-
-<p align="center">
-  <img src="https://github.com/n0rs4rt/ORS4SysInfo/blob/eecd09e696c9b9522e285d334b35d6891b3de19c/assets/graficas.png" alt="ORS4SysInfo - Portada" width="900">
-</p>
 
 ---
 
