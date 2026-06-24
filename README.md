@@ -119,17 +119,21 @@ Por ejemplo:
 * Equipo de recepción.
 * Máquina virtual de pruebas.
 
+<p align="center">
+  <img src="https://github.com/n0rs4rt/ORS4SysInfo/blob/39884a04537b5742fb5e87bbb440316f99294a6f/assets/busqueda.png" alt="ORS4SysInfo - Portada" width="900">
+</p>
+
+
 El nombre personalizado puede editarse desde el menú contextual del equipo y guardarse presionando Enter.
 
 ---
 
 ## Notas por equipo
 
-<!-- TODO: Colocar aquí una captura del apartado de notas -->
+<p align="center">
+  <img src="https://github.com/n0rs4rt/ORS4SysInfo/blob/250c12b31cf1cf3b7a57c1f6777f0b0206f737b0/assets/Notas.png" alt="ORS4SysInfo - Portada" width="900">
+</p>
 
-<!-- Ejemplo: -->
-
-<!-- ![Notas por equipo](docs/images/notas-equipo.png) -->
 
 Cada equipo cuenta con un apartado de notas donde se puede guardar información adicional, observaciones o detalles útiles.
 
@@ -148,11 +152,10 @@ Si un equipo ya registrado se vuelve a escanear, la información técnica se act
 
 ## Reportes PDF
 
-<!-- TODO: Colocar aquí una captura del botón de exportar PDF o ejemplo de reporte -->
-
-<!-- Ejemplo: -->
-
-<!-- ![Reporte PDF](docs/images/reporte-pdf.png) -->
+<p align="center">
+  <img src="https://github.com/n0rs4rt/ORS4SysInfo/blob/150bf98082e3227b428039016ca1fc6096187a08/assets/PDF.png
+" alt="ORS4SysInfo - Portada" width="900">
+</p>
 
 ORS4SysInfo permite generar un reporte técnico en PDF para cada equipo registrado.
 
