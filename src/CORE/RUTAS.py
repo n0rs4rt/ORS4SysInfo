@@ -1,0 +1,72 @@
+from pathlib import Path
+import os
+
+ruta_interna = Path(__file__).resolve().parents[1]
+ruta_logs = ruta_interna / "Logs"
+ruta_logs.mkdir (parents=True, exist_ok=True)
+
+ruta_db = ruta_interna / "data_base_equipos.db"
+ruta_config_email = ruta_interna / "config.db"
+
+fuente_texto = ruta_interna / "assets" / "fuentes" / "DejaVuSans.ttf"
+fuente_texto_B = ruta_interna / "assets" / "fuentes" / "DejaVuSans-Bold.ttf"
+
+ruta_tmp = Path (os.environ["TEMP"]) / "ors4sys_info"
+ruta_tmp.mkdir (parents=True, exist_ok=True)
+
+ruta_icono = ruta_interna / "assets" / "logo.ico"
+ruta_logo = ruta_interna / "assets" / "logo.png"
+logo_scan = ruta_interna / "assets" / "scan.png"
+logo_download = ruta_interna / "assets" / "download.png"
+logo_configuracion = ruta_interna / "assets" / "configuracion.png"
+logo_sin_registro = ruta_interna / "assets" / "sin_registros.png"
+logo_lupa = ruta_interna / "assets" / "lupa.png"
+logo_registro = ruta_interna / "assets" / "registro.png"
+logo_consulta = ruta_interna / "assets" / "consulta.png"
+logo_equipo = ruta_interna / "assets" / "equipo.png"
+logo_equipo2 = ruta_interna / "assets" / "equipo2.png"
+logo_escanear = ruta_interna / "assets" / "escanear.png"
+logo_exclamacion = ruta_interna / "assets" / "exclamacion.png"
+logo_modelo = ruta_interna / "assets" / "modelo.png"
+logo_fabricante = ruta_interna / "assets" / "fabricante.png"  
+logo_sistema_operativo = ruta_interna / "assets" / "sistemaop.png"
+logo_idioma = ruta_interna / "assets" / "idioma.png"
+logo_zona_horaria = ruta_interna / "assets" / "zona_horaria.png"
+logo_dominio = ruta_interna / "assets" / "dominio.png"
+logo_bios_version = ruta_interna / "assets" / "bios_version.png"
+logo_placa = ruta_interna / "assets" / "placa.png"
+logo_serial_placa = ruta_interna / "assets" / "serial.png"
+logo_version_placa = ruta_interna / "assets" / "version.png"
+logo_licencia = ruta_interna / "assets" / "licencia.png"
+logo_key = ruta_interna / "assets" / "key.png"
+logo_procesador = ruta_interna / "assets" / "cpu.png"
+logo_usuarios = ruta_interna / "assets" / "usuarios.png"
+logo_usuario = ruta_interna / "assets" / "usuario.png"
+logo_almacenamiento = ruta_interna / "assets" / "discos.png"
+logo_disco = ruta_interna / "assets" / "disco.png"
+logo_memorias = ruta_interna / "assets" / "memorias.png"
+logo_memoria = ruta_interna / "assets" / "memoria.png"
+logo_red = ruta_interna / "assets" / "red.png"
+logo_redes = ruta_interna / "assets" / "redes.png"
+logo_gpus = ruta_interna / "assets" / "gpus.png"
+logo_grafica = ruta_interna / "assets" / "grafica.png"
+logo_guardar = ruta_interna / "assets" / "guardar.png"
+logo_papelera = ruta_interna / "assets" / "papelera.png"
+logo_computador_rojo = ruta_interna / "assets" / "equipo_rojo.png"
+logo_papelera_blanca = ruta_interna / "assets" / "papelera_blanca.png"
+logo_busqueda = ruta_interna / "assets" / "busqueda.png"
+logo_pdf = ruta_interna / "assets" / "pdf.png"
+logo_email = ruta_interna / "assets" / "email.png"
+logo_pdf_error = ruta_interna / "assets" / "pdf_error.png"
+logo_email_config = ruta_interna / "assets" / "email_config.png"
+logo_pdf_email = ruta_interna / "assets" / "pdf_email.png"
+logo_aviso = ruta_interna / "assets" / "aviso.png"
+logo_check = ruta_interna / "assets" / "check.png"
+logo_error = ruta_interna / "assets" / "error.png"
+logo_cerrar = ruta_interna / "assets" / "cerrar.png"
+
+#Logo recursos
+logo_github = ruta_interna / "assets" / "github.png"
+logo_instagran = ruta_interna / "assets" / "instagran.png"
+logo_youtube = ruta_interna / "assets" / "youtube.png"
+
