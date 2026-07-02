@@ -20,6 +20,19 @@ Si encuentras algún fallo o tienes una sugerencia, puedes reportarlo a través 
 
 ---
 
+## Versiones disponibles
+
+- **Versión principal**  
+  Uso normal de la aplicación sin consola visible.
+  [ Descargar última versión](https://github.com/n0rs4rt/ORS4SysInfo/releases/download/v1.0.0/Ors4SysInfo.zip)
+
+- **Versión debug**  
+  Muestra una consola con información en tiempo real.  
+  Recomendada únicamente en caso de fallos o para diagnóstico.
+  [ Descargar última versión](https://github.com/n0rs4rt/ORS4SysInfo/releases/download/v1.0.0/Version_Debug.zip)
+
+---
+
 ## Características principales
 
 * Escaneo técnico de equipos Windows.
@@ -338,6 +351,18 @@ El proyecto ha sido probado en equipos con Windows 8, Windows 10 y Windows 11, a
 6. Agregar notas si es necesario.
 7. Exportar el reporte en PDF o enviarlo por email.
 8. Crear copias de seguridad de la base de datos cuando sea necesario.
+
+---
+
+## Nota sobre antivirus
+
+ORS4SysInfo es una herramienta que recopila información interna del sistema Windows, genera reportes, trabaja con base de datos local y puede interactuar con configuraciones de email.
+
+Debido a esto, algunos antivirus pueden marcar el ejecutable como sospechoso o generar un falso positivo, especialmente al tratarse de una aplicación compilada en Python.
+
+Si esto ocurre, se recomienda revisar el código fuente disponible en el repositorio, descargar la herramienta únicamente desde las fuentes oficiales y verificar el archivo antes de ejecutarlo.
+
+ORS4SysInfo no realiza acciones maliciosas, no envía información a servidores externos y no recopila datos fuera del equipo local.
 
 ---
 
