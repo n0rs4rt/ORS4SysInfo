@@ -24,12 +24,12 @@ Si encuentras algún fallo o tienes una sugerencia, puedes reportarlo a través 
 
 - **Versión principal**  
   Uso normal de la aplicación sin consola visible.
-  [ Descargar última versión](https://github.com/n0rs4rt/ORS4SysInfo/releases/download/v1.0.0/Ors4SysInfo.zip)
+  [ Descargar última versión](https://github.com/n0rs4rt/ORS4SysInfo/releases/download/v1.1.0/Ors4SysInfo.zip)
 
 - **Versión debug**  
   Muestra una consola con información en tiempo real.  
   Recomendada únicamente en caso de fallos o para diagnóstico.
-  [ Descargar última versión](https://github.com/n0rs4rt/ORS4SysInfo/releases/download/v1.0.0/Version_Debug.zip)
+  [ Descargar última versión](https://github.com/n0rs4rt/ORS4SysInfo/releases/download/v1.1.0/Version_Debug.zip)
 
 ---
 
