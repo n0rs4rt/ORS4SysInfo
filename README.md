@@ -2,7 +2,7 @@
 
 
 <p align="center">
-  <img src="https://github.com/n0rs4rt/ORS4SysInfo/blob/685b5af870dea869c6e13e22faa48e24b87dd8f7/assets/portada.png" alt="ORS4SysInfo - Portada" width="900">
+  <img src="https://github.com/n0rs4rt/ORS4SysInfo/blob/96d9e4b076be81efe31c90c20ec28677d9b76fa9/assets/portada.png" alt="ORS4SysInfo - Portada" width="900">
 </p>
 
 ORS4SysInfo es una herramienta desarrollada en Python para el inventario técnico de equipos Windows.
