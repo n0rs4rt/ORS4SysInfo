@@ -957,8 +957,7 @@ class Interfaz (ctk.CTk):
 
         frame_lista_gpus = ctk.CTkScrollableFrame(contenedor_gpu, fg_color="transparent") #FRAME CON SCROLL QUE CONTIENE LOS DISCOS
         frame_lista_gpus.grid(row=1, column=0, columnspan=2, padx=2, pady=2, sticky="ewsn")
-        # frame_lista_gpus.grid_columnconfigure(0, weight=0)
-        # frame_lista_gpus.grid_rowconfigure(0, weight=0)
+
 
         for i, gpu in enumerate(gpus):
 
@@ -1037,11 +1036,50 @@ class Interfaz (ctk.CTk):
         boton_guardar = ctk.CTkButton(contenedor_notas, image=guardar_logo, text="Guardar", fg_color="#1477E9",hover_color="#206CC2", text_color="white", width=100, height=15, compound="left", cursor="hand2",border_width=1, border_color="#BAC8D9", corner_radius=4, command=self.guardar_notas)
         boton_guardar.grid(row=0, column=3, padx=10, pady=2, sticky="e")
 
-        self.label_caja_notas = ctk.CTkTextbox(contenedor_notas, font=("Arial", 12), fg_color="#FFFFFF", border_width=2, border_color="#D3D3D3",)
+        self.label_caja_notas = ctk.CTkTextbox(contenedor_notas, font=("Arial", 12), fg_color="#FFFFFF", border_width=2, border_color="#D3D3D3", undo=True,maxundo=-1,autoseparators=True)
         self.label_caja_notas.grid(row=1, column=0, columnspan=4, padx=5, pady=(0,10), sticky="ewsn")
         self.label_caja_notas.insert("0.0", self.notas)
+        self.label_caja_notas.edit_reset()
         self.label_caja_notas.bind("<KeyRelease>", self.deteccion_de_cambios_notas)
+        self.label_caja_notas.bind("<Button-3>", self.menu_click_derecho_notas)
     
+    def menu_click_derecho_notas (self, event):
+        """
+        METODO QUE MANEJA EL MENU DE CLICK DERECHO
+        """
+        menu = tk.Menu(self, tearoff=0, bg = "#ffffff")
+        menu.add_command(label="Copiar", command=self.menu_copiar_notas)
+        menu.add_command(label="Pegar",  command=self.menu_pegar_notas)
+        menu.post(event.x_root, event.y_root)
+        
+    def menu_copiar_notas (self):
+        """
+        METODO QUE COPIA LAS NOTAS CON CLICK DERECHO
+        """
+        try:
+            texto = self.label_caja_notas.selection_get()
+            
+        except:
+            texto = self.label_caja_notas.get("1.0", "end-1c")
+        
+        self.clipboard_clear()
+        self.clipboard_append(texto)
+        self.update()
+        
+    def menu_pegar_notas (self):
+        """
+        METODO QUE PEGA LAS NOTAS CON CLICK DERECHO
+        """
+        try:
+            try:
+                self.label_caja_notas.delete("sel.first", "sel.last")
+            except:
+                pass
+            texto = self.clipboard_get()
+            self.label_caja_notas.insert("insert", texto)
+        except:
+            pass
+        
     def guardar_notas (self):
         """
         METODO QUE GUARDA LAS NOTAS
@@ -1929,7 +1967,7 @@ class Interfaz (ctk.CTk):
         
         frame_version = ctk.CTkFrame(contenedor, fg_color="#B3CDE3")
         frame_version.pack( pady=10, padx=10)
-        label_version = ctk.CTkLabel(frame_version, text=" Versión: 1.0 ", font=("Arial", 12,"bold"),)
+        label_version = ctk.CTkLabel(frame_version, text=" Versión: 1.1.0 ", font=("Arial", 12,"bold"),)
         label_version.pack(padx=5)
         
         label_descripcion = ctk.CTkLabel(contenedor, text="Herramienta orientada a soporte técnico e infraestructuras IT, capaz de recopilar información del sistema, almacenar registros en una base de datos local y generar reportes automatizados.", font=("Arial", 13), text_color="#203A6E", wraplength=350)
