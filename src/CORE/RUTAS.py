@@ -64,6 +64,7 @@ logo_aviso = ruta_interna / "assets" / "aviso.png"
 logo_check = ruta_interna / "assets" / "check.png"
 logo_error = ruta_interna / "assets" / "error.png"
 logo_cerrar = ruta_interna / "assets" / "cerrar.png"
+logo_circulo = ruta_interna / "assets" / "logo_circulo.png"
 
 #Logo recursos
 logo_github = ruta_interna / "assets" / "github.png"
