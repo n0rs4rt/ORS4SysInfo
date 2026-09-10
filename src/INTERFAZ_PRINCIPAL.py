@@ -8,6 +8,7 @@ from CORE.BASE_DATOS import DB_Equipos
 from ESCANEAR import Escanear
 from CORE.REPORTE_PDF import Reporte_PDF
 from CORE.EMAIL import Email
+from CORE.CHECK_UPDATE import comprobar_actualizacion
 
 ctk.set_appearance_mode("light")
 ctk.set_default_color_theme("blue")
@@ -55,6 +56,8 @@ class Interfaz (ctk.CTk):
         self.bind("<Button-3>", self.restaura_nombre_custom_host)
         
         self.custom_name_equipos_seleccionado = False
+        
+        
     def contenedor_principal (self):
         """
         Contenedor unico de la interfaz
@@ -97,12 +100,19 @@ class Interfaz (ctk.CTk):
         frame_espacio = ctk.CTkFrame(self.frame_header,height=4, fg_color="transparent")
         frame_espacio.grid(row=0, column=1, sticky="ew")
 
+
+        nueva_version =  comprobar_actualizacion
+        if nueva_version:
+            imagen_circulo = ctk.CTkImage(light_image=Image.open(logo_circulo), dark_image=Image.open(logo_circulo), size=(10, 10))
+            boton_nueva_actualizacion = ctk.CTkButton(self.frame_header,image=imagen_circulo, compound="left", text="Nueva actualizacion", font=("Arial", 11), fg_color="transparent", text_color="#203A6E", hover_color="#ffffff", cursor="hand2",command=lambda: webbrowser.open("https://github.com/n0rs4rt/ORS4SysInfo"))
+            boton_nueva_actualizacion.grid(row=0, column=2, padx=10, sticky="w")
+        
         logo_escanear = ctk.CTkImage(light_image=Image.open(logo_scan), size=(16, 16))
         boton_escanear = ctk.CTkButton(self.frame_header, image = logo_escanear, text = "Escanear equipo", font=("Arial", 12,"bold" ), fg_color="#1477E9",hover_color="#206CC2", text_color="white", width=155, height=36, compound="left", cursor="hand2",border_width=1, border_color="#BAC8D9", corner_radius=4, command=self.escanear_equipo)
-        boton_escanear.grid(row=0, column=2, padx=10, sticky="w")
+        boton_escanear.grid(row=0, column=3, padx=10, sticky="w")
 
         frame_exportar = ctk.CTkFrame(self.frame_header, fg_color="transparent",border_width=2, border_color="#F5F5F5", corner_radius=4, cursor="hand2")
-        frame_exportar.grid(row=0, column=3, padx=10, sticky="w")
+        frame_exportar.grid(row=0, column=4, padx=10, sticky="w")
 
         download_logo = ctk.CTkImage(light_image=Image.open(logo_download), size=(20, 16))
 
@@ -115,7 +125,7 @@ class Interfaz (ctk.CTk):
         self.copia_seguridad.grid(row=0, column=1, padx=(0,4), pady=4, sticky="w")
 
         frame_config = ctk.CTkFrame(self.frame_header, fg_color="transparent",border_width=2, border_color="#F5F5F5", corner_radius=4)
-        frame_config.grid(row=0, column=4, padx=(10,35), sticky="w")
+        frame_config.grid(row=0, column=5, padx=(10,35), sticky="w")
         logo_config = ctk.CTkImage(light_image=Image.open(logo_configuracion), size=(18, 18))
         label_config = ctk.CTkLabel(frame_config, image=logo_config, text="", cursor="hand2")
         label_config.grid(row=0, column=0, padx=(10,0), pady=3, sticky="w")
@@ -1135,8 +1145,8 @@ class Interfaz (ctk.CTk):
             
             self.entry_custom_name = widget.custom_name  #obtenemos el widget que habia sido pasado como referencia a objeto custom_name del frame
             self.entry_custom_name.configure(state="normal",border_width=2)
+            self.entry_custom_name.delete(0,"end")
             self.entry_custom_name.focus_set()
-            self.entry_custom_name.select_range(0, "end") 
             
             self.custom_name_equipos_seleccionado = True
 
@@ -1170,9 +1180,9 @@ class Interfaz (ctk.CTk):
             if nombre_nuevo == self.nombre_custom or not nombre_nuevo:
                 self.restaura_nombre_custom_host()
                 return
-            
             self.entry_custom_name.configure (state="disabled",border_width=0)
             
+            self.entry_custom_name.xview_moveto(0)
             nombre_actualizado =self.db.actualizar_custom_name (nombre_nuevo,self.id_equipo_edicion_nombre)
             
             if not nombre_actualizado:
@@ -1967,7 +1977,7 @@ class Interfaz (ctk.CTk):
         
         frame_version = ctk.CTkFrame(contenedor, fg_color="#B3CDE3")
         frame_version.pack( pady=10, padx=10)
-        label_version = ctk.CTkLabel(frame_version, text=" Versión: 1.1.0 ", font=("Arial", 12,"bold"),)
+        label_version = ctk.CTkLabel(frame_version, text=" Versión: 1.2.0 ", font=("Arial", 12,"bold"),)
         label_version.pack(padx=5)
         
         label_descripcion = ctk.CTkLabel(contenedor, text="Herramienta orientada a soporte técnico e infraestructuras IT, capaz de recopilar información del sistema, almacenar registros en una base de datos local y generar reportes automatizados.", font=("Arial", 13), text_color="#203A6E", wraplength=350)
