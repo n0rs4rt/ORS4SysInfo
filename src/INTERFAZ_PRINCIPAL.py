@@ -100,8 +100,7 @@ class Interfaz (ctk.CTk):
         frame_espacio = ctk.CTkFrame(self.frame_header,height=4, fg_color="transparent")
         frame_espacio.grid(row=0, column=1, sticky="ew")
 
-
-        nueva_version =  comprobar_actualizacion
+        nueva_version =  comprobar_actualizacion()
         if nueva_version:
             imagen_circulo = ctk.CTkImage(light_image=Image.open(logo_circulo), dark_image=Image.open(logo_circulo), size=(10, 10))
             boton_nueva_actualizacion = ctk.CTkButton(self.frame_header,image=imagen_circulo, compound="left", text="Nueva actualizacion", font=("Arial", 11), fg_color="transparent", text_color="#203A6E", hover_color="#ffffff", cursor="hand2",command=lambda: webbrowser.open("https://github.com/n0rs4rt/ORS4SysInfo"))
