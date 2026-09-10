@@ -31,6 +31,9 @@ Si encuentras algún fallo o tienes una sugerencia, puedes reportarlo a través 
   Recomendada únicamente en caso de fallos o para diagnóstico.
   [ Descargar última versión (v1.2.0)](https://github.com/n0rs4rt/ORS4SysInfo/releases/download/v1.2.0/ORS4SysInfo_v1.2.0_debug.zip)
 
+- **Historial de versiones**
+  [ Versiones](https://github.com/n0rs4rt/ORS4SysInfo/releases)
+
 ---
 
 ## Características principales
